@@ -32,7 +32,7 @@
 		</resources>
 		<testResources>
 			<testResource>
-				<directory>src/test/java/pruebaMaven/pruebaMA</directory>
+				<directory>src/test</directory>
 			</testResource>
 		</testResources>
 
