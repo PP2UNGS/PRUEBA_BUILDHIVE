@@ -22,9 +22,9 @@
 		<outputDirectory>target/classes</outputDirectory>
 		<finalName>${project.artifactId}-${project.version}</finalName>
 		<testOutputDirectory>target/test-classes</testOutputDirectory>
-		<sourceDirectory>src/main/java</sourceDirectory>
+		<sourceDirectory>src/main/java/pruebaMaven/pruebaMA</sourceDirectory>
 		<scriptSourceDirectory>src/main/scripts</scriptSourceDirectory>
-		<testSourceDirectory>src/test/java</testSourceDirectory>
+		<testSourceDirectory>src/test/java/pruebaMaven/pruebaMA</testSourceDirectory>
 		<resources>
 			<resource>
 				<directory>src/main/resources</directory>
@@ -32,7 +32,7 @@
 		</resources>
 		<testResources>
 			<testResource>
-				<directory>src/test/resources</directory>
+				<directory>src/test/java/pruebaMaven/pruebaMA</directory>
 			</testResource>
 		</testResources>
 
