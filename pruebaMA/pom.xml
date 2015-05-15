@@ -18,70 +18,17 @@
 	</developers>
 
 	<build>
-		<directory>target</directory>
+		<!--<directory>target</directory>
 		<outputDirectory>target/classes</outputDirectory>
 		<finalName>${project.artifactId}-${project.version}</finalName>
-		<testOutputDirectory>target/test-classes</testOutputDirectory>
-		<sourceDirectory>src/main/java</sourceDirectory>
-		<scriptSourceDirectory>src/main/scripts</scriptSourceDirectory>
-		<testSourceDirectory>src/test/java/pruebaMaven/pruebaMA</testSourceDirectory>
-		<resources>
-			<resource>
-				<directory>src/main/resources</directory>
-			</resource>
-		</resources>
-		<testResources>
-			<testResource>
-				<directory>src/test/resources</directory>
-			</testResource>
-		</testResources>
-
-		<plugins>
-		<plugin>
-      <artifactId>maven-failsafe-plugin</artifactId>
-      <version>2.14.1</version>
-      <dependencies>
-        <dependency>
-          <groupId>org.apache.maven.surefire</groupId>
-          <artifactId>surefire-junit47</artifactId>
-          <version>2.14.1</version>
-        </dependency>
-      </dependencies>
-      <configuration>
-        <testFailureIgnore>true</testFailureIgnore>
-      </configuration>
-      <executions>
-        <execution>
-          <goals>
-            <goal>integration-test</goal>
-            <goal>verify</goal>
-          </goals>
-        </execution>
-      </executions>
-    </plugin>
-			<plugin>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.2</version>
-				<configuration>
-					<source>1.7</source>
-					<target>1.7</target>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-project-info-reports-plugin</artifactId>
-				<version>2.7</version>
-				<configuration>
-					<dependencyLocationsEnabled>false</dependencyLocationsEnabled>
-				</configuration>
-			</plugin>
-			<!-- plugin> <groupId>org.codehaus.mojo</groupId> <artifactId>cobertura-maven-plugin</artifactId> 
-				<version>2.5</version> <configuration> <check> <branchRate>90</branchRate> 
-				<lineRate>85</lineRate> <haltOnFailure>true</haltOnFailure> <totalBranchRate>85</totalBranchRate> 
-				<totalLineRate>85</totalLineRate> <packageLineRate>85</packageLineRate> <packageBranchRate>85</packageBranchRate> 
-				</check> </configuration> </plugin -->
-
-		</plugins>
+	    <testOutputDirectory>target/test-classes</testOutputDirectory> -->
+		<!-- <sourceDirectory>src/main/java</sourceDirectory> -->
+		
+		<!-- <scriptSourceDirectory>src/main/scripts</scriptSourceDirectory> -->
+		<!-- <testSourceDirectory>src/test/java/pruebaMaven/pruebaMA</testSourceDirectory> -->
+		
+		
+		
 	</build>
 
 	<properties>
@@ -90,30 +37,13 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-		<!-- Hibernate / JPA -->
-		<hibernate.version>4.2.1.Final</hibernate.version>
+	
 
-		<!-- Logging -->
-		<logback.version>1.0.13</logback.version>
-		<slf4j.version>1.7.5</slf4j.version>
-
-		<!-- Test -->
-		<junit.version>4.11</junit.version>
-
+		
+		
 	</properties>
 
 	<dependencies>
-
-
-		<!-- Hibernate -->
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-entitymanager</artifactId>
-			<version>${hibernate.version}</version>
-		</dependency>
-
-
-		<!-- Test Artifacts -->
 
 		<dependency>
 			<groupId>junit</groupId>
@@ -121,62 +51,13 @@
 			<version>4.8.2</version>
 			<scope>test</scope>
 		</dependency>
+		
+    
 
-		<dependency>
-			<groupId>org.mockito</groupId>
-			<artifactId>mockito-core</artifactId>
-			<version>1.8.5</version>
-			<scope>test</scope>
-		</dependency>
+				
 
-
-		<dependency>
-			<groupId>log4j</groupId>
-			<artifactId>log4j</artifactId>
-			<version>1.2.15</version>
-			<exclusions>
-				<exclusion>
-					<groupId>com.sun.jdmk</groupId>
-					<artifactId>jmxtools</artifactId>
-				</exclusion>
-				<exclusion>
-					<groupId>com.sun.jmx</groupId>
-					<artifactId>jmxri</artifactId>
-				</exclusion>
-				<exclusion>
-					<groupId>javax.jms</groupId>
-					<artifactId>jms</artifactId>
-				</exclusion>
-			</exclusions>
-		</dependency>
-
-		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-			<version>5.1.22</version>
-		</dependency>
-
+		
 	</dependencies>
 
-	<reporting>
-		<plugins>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>cobertura-maven-plugin</artifactId>
-				<version>2.7</version>
-				<configuration>
-					<formats>
-						<format>html</format>
-						<format>xml</format>
-					</formats>
-					<instrumentation>
-						<excludes>
-							<exclude>ungs/edu/ve/vista/*.class</exclude>
-							<exclude>ungs/edu/ve/util/*.class</exclude>
-						</excludes>
-					</instrumentation>
-				</configuration>
-			</plugin>
-		</plugins>
-	</reporting>
+	
 </project>
